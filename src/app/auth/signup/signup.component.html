@@ -1,0 +1,27 @@
+<section class="signup-form"
+         fxLayoutAlign="center"
+         fxFlexAlign="center">
+  <form fxLayout="column"
+        fxLayoutGap="10px"
+        fxLayoutAlign="center">
+    <mat-form-field>
+      <input type="email"
+             matInput
+             placeholder="Your Email"
+      >
+    </mat-form-field>
+    <mat-form-field hintLabel="Should be at least 6 characters long.">
+      <input
+        type="password"
+        matInput
+        placeholder="Your Password"
+        minlength="6"
+        required
+        #pwInput
+      >
+      <mat-hint align="end">{{pwInput.value?.length}} / 6</mat-hint>
+
+    </mat-form-field>
+    <button mat-raised-button color="primary">Submit</button>
+  </form>
+</section>
